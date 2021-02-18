@@ -1,0 +1,20 @@
+{
+  "name": "bunnings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "params.js",
+  "scripts": {
+    "prod": "./node_modules/.bin/wdio wdio.conf.js",
+    "uat": "./node_modules/.bin/wdio wdio.uat.conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rpii/wdio-html-reporter": "^6.3.2",
+    "@wdio/cli": "^7.0.5",
+    "chai": "^4.3.0",
+    "chromedriver": "^88.0.0",
+    "wdio-html-format-reporter": "^0.4.0",
+    "webdriverio": "^7.0.5"
+  }
+}
