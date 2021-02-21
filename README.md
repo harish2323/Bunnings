@@ -17,3 +17,8 @@ Currently this suite can be run in chrome only. But can be easily extended to ot
 2.  type "npm install" to install all dependencies.
 3.  "npm run prod" to run all tests
 4.  "npm run prod tags=@FilterByBrand" to run individual scenarios with tags.
+
+
+## Results
+the html results are in the reports folder. Open the file master-report.hml to view the results.
+
