@@ -38,9 +38,11 @@ class SearchResultsPage {
      setFilterValue(filter)
     {
         var filters=this.splitFilterData(filter)
+        console.log("OUTPUT FILTER SIZE :: "+filters[0])
         for(var i=0;i<filters.length;i++){
             var filterName=filters[i][0]
             var filterValue=filters[i][1]
+            console.log("Name :::::: "+filterName + " Value ::::: "+filterValue)
             actions.expandAccordion(this.filterAccordion(filterName))
             this.filterCheckBox(filterValue).click()
         }
@@ -153,6 +155,7 @@ class SearchResultsPage {
             default:
                 break
         }
+        console.log("Shop by count :: "+shopbycount +" :: Result count value :"+filteredResultCountValue)
         if(shopbycount==filteredResultCountValue)
             return true
         else
@@ -184,13 +187,14 @@ class SearchResultsPage {
     {
         var filters= data.split(";")
         console.log("DATA :::: "+filters)
-
-        var filterNameValue=[[],[]]
+        console.log("Filter size :::::: "+filters.length)
+        var filterNameValue=[]
         for(var i=0;i<filters.length;i++){
             var temp = filters[i].split("=")[0].toString()
-             filterNameValue[i][0]=filters[i].split("=")[0].toString().replace("\"","")
-             filterNameValue[i][1]=filters[i].split("=")[1].toString().replace("\"","")
-             console.log("FILTERSSSS :::: "+i+" : "+ filterNameValue[i][0]+ " "+filterNameValue[i][1])
+             var filterName=filters[i].split("=")[0].toString().replace("\"","")
+             var filterValue=filters[i].split("=")[1].toString().replace("\"","")
+             filterNameValue.push([filterName,filterValue])
+             console.log("FILTERSSSS :::: "+i+" : "+ filterNameValue[i][0]+ " value :: "+filterNameValue[i][1])
 
         }
 

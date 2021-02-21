@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Search_and_Filter_scenarios" timestamp="2021-02-21T11:39:34" time="76.517" tests="3" failures="0" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="featureName" value="Search and Filter scenarios"/>
+      <property name="capabilities" value="chrome.88_0_4324_182.macosx"/>
+      <property name="featureFile" value="./features/Search.feature"/>
+    </properties>
+    <testcase classname="CucumberJUnitReport-chrome.88_0_4324_182.macosx-LanguageLoop.Search_and_Filter_scenarios" name="Search_and_Filter_scenarios.As_a_user_I_can_filter_the_search_results_by_price_range" time="30.246">
+      <error message="expected false to be true"/>
+      <system-out>
+        <![CDATA[
+✅ Given I am on the home page✅ When I select suburb Collingwood and store Collingwood, VIC, 3066✅ And I search for pipe✅ And I am in search results page✅ And I set filter "Price Range=Under $2"❗ Then I verify price is within range "Price Range=Under $2"
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError: expected false to be true
+    at World.<anonymous> (/Users/harishravichandran/DevProjects/Bunnings/features/step-definitions/searchresultssteps.js:18:67)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.88_0_4324_182.macosx-LanguageLoop.Search_and_Filter_scenarios" name="Search_and_Filter_scenarios.As_a_user_I_can_filter_the_search_results_by_Brand" time="24.446">
+      <system-out>
+        <![CDATA[
+✅ Given I am on the home page✅ When I select suburb Collingwood and store Collingwood, VIC, 3066✅ And I search for pipe✅ And I am in search results page✅ And I set filter "Brand=Brasshards";"Price Range=$2 - $5"✅ Then I verify brand is filtered by "Brand=Brasshards";"Price Range=$2 - $5"
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.88_0_4324_182.macosx-LanguageLoop.Search_and_Filter_scenarios" name="Search_and_Filter_scenarios.As_a_user_I_can_filter_the_search_results_by_Brand" time="21.818">
+      <system-out>
+        <![CDATA[
+✅ Given I am on the home page✅ When I select suburb Collingwood and store Collingwood, VIC, 3066✅ And I search for pipe✅ And I am in search results page✅ And I set filter "Shop by=Online only";"Brand=Brasshards"✅ Then I verify shopby is filtered by "Shop by=Online only";"Brand=Brasshards"
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

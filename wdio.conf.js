@@ -145,7 +145,30 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: 
+    ['spec',
+   [ HtmlReporter,
+     {
+              outputDir: './reports/html-reports/',
+              filename: 'report.html',
+              reportTitle: 'Test Report Title',
+              
+              //to show the report in a browser when done
+              showInBrowser: false,
+  
+              //to turn on screenshots after every test
+              useOnAfterCommandForScreenshot: false,  
+  
+      
+    }],
+    ['junit', {
+      outputDir: './reports/junit/',
+      outputFileFormat: function (options) {
+          return 'testresults.xml';
+      },
+      packageName: "LanguageLoop" // chrome.41 - administrator
+  }]
+  ],
 
 
     //
